@@ -1,0 +1,177 @@
+.boottomcontent{
+    padding: rem(507) 0 rem(45) 0;
+    // border-bottom: rem(3) solid #282828;
+    transition: none;
+
+    &__top{
+        padding: 0 rem(291.5);
+        margin-bottom: rem(247);
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: rem(61);
+        span{
+            color: $white;
+            font-size: rem(62);
+            font-weight: 700;
+            line-height: rem(80);
+        }
+    }
+
+    &__button{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    &__bottom{
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        position: relative;
+        border-bottom: rem(3) solid #282828;
+        padding-bottom: rem(40);
+
+        .block{
+            &_abs{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            span{
+                font-size: rem(16);
+                font-weight: 700;
+                line-height: rem(30.77);
+                text-transform: uppercase;
+                color: #646363;
+                letter-spacing: rem(0.55);
+                span{
+                    color: #ddb680;
+                }
+            }
+            span:hover{
+                color: $white;
+                span{
+                    color: $white;
+                }
+            }
+    
+            a{
+                color: #ddb680;
+                font-size: rem(16);
+                font-weight: 700;
+                line-height: rem(14);
+                text-transform: uppercase;
+                letter-spacing: rem(1.2);
+                svg{
+                    fill: #424345;
+                    margin: 0 rem(14);
+                }
+                .pint{
+                    width: rem(19);
+                    height: rem(22);
+                }
+                .bol{
+                    width: rem(22);
+                    height: rem(22);
+                }
+                .inst{
+                    width: rem(22);
+                    height: rem(22);
+                }
+                .be{
+                    width: rem(32);
+                    height: rem(21);
+                }
+                .fb{
+                    width: rem(11);
+                    height: rem(22);
+                }
+    
+            }
+            a:hover{
+                color: $white;
+                svg{
+                    fill: #fbcd6c;
+                }
+            }
+    
+        }
+    }
+}
+
+
+@media screen and (max-width:769px){
+    .boottomcontent{
+        padding: 239px 37px 0 37px;
+
+        &__top{
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        &__title{
+            margin-bottom: 36px;
+            span{
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+
+        &__bottom{
+            padding-bottom: 14px;
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+                .block{
+                    &_abs{
+                        order: -1;
+                        position: inherit;
+                        width: 100%;
+                        padding: 71px 70px 30px;
+                        border-bottom: 1px solid #282828;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 25px;
+                    }
+                    a{
+                        font-size: 9px;
+                        line-height: 14px;
+                        svg{
+                            margin: 0 12px;;
+                        }
+                    }
+                    span{
+                        font-size: 9px;
+                        line-height: 14px;
+                    }
+                    .pint{
+                        width: 13px;
+                        height: 16px;
+                    }
+                    .bol{
+                        width: 17px;
+                        height: 16px;
+                    }
+                    .inst{
+                        width: 17px;
+                        height: 16px;
+                    }
+                    .be{
+                        width: 24px;
+                        height: 16px;
+                    }
+                    .fb{
+                        width: 9px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

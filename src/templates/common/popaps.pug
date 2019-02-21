@@ -3,30 +3,22 @@
     .contentpopap 
         .wrapper
             .contentpopap__head
-                .contentpopap__logo
-                    img(src="./images/logo.png", alt="")
                 .contentpopap__title
-                    span Apply Now!
-                .contentpopap__cancel
-                    img(src="./images/cancel.png", alt="")
+                    span Leave your contact details.
+                button.contentpopap__close
+                    svg(class="cloce")
+                        use(xlink:href="./images/sprite/sprite.svg#close")
             form.form
                 .form__content
                     .form__left
-                        input(type="text" placeholder="Имя*" required)
-                        input(type="email" placeholder="E-mail*" required)
-                        input(type="text" placeholder="Фамилия*" required)
-                        input(type="tell" placeholder="Телефон" required)
-                        label.file_download
-                            input(type="file" placeholder="Приложите резюме*" required)
-
-                            //- div.bord 
-                            span Приложите резюме*
-                            div Файл не выбран
+                        input.i(type="text" placeholder="Your Name" required)
+                        input.i(type="email" placeholder="Your Email" required)
+                        input.i(type="tell" placeholder="Your Phone" required)
                         
                     .form__right
-                        textarea(placeholder="Расскажите несколько слов о себе")
+                        textarea(placeholder="Your Message")
 
                 .form__button
-                    button.button(type="submit") ОТПРАВИТЬ РЕЗЮМЕ
+                    button.button.button2(type="submit") Send
 
 

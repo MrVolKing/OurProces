@@ -1,3 +1,19 @@
-.sect1{
-   
+.sect3{
+   background-image: url(../images/bg.png);
+//    height: rem(1234);
+   background-size: contain;
+   position: relative;
+}
+
+@media screen and (max-width:769px){
+    .sect3{
+        background-image: url(../images/bg_mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-color: #edecec;
+
+        // height: 541px;
+        // background: aqua;
+    }
+
 }

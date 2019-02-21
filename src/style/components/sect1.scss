@@ -35,17 +35,16 @@
             letter-spacing: rem(9.06);
             font-weight: 800;
             line-height: rem(173.33);
-            // height: rem(185);
         }
     }
  
-
     &__socials{
         width: rem(64);
         height: rem(346);
         box-shadow: 0 30px 180px rgba(0, 0, 0, 0.24);
         background-color: $white;
         position: fixed;
+        z-index: 219870000;
         right: rem(36);
         top: rem(228);
         display: flex;
@@ -57,7 +56,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            // margin-bottom: rem(40);
             background: transparent;
             border: none;
             svg{
@@ -67,15 +65,81 @@
             }
         }
 
+        a:hover:after{
+            content: "";
+            width: rem(51);
+            height: rem(1);
+            background-color: #010101;
+            opacity: 0.25;
+            position: absolute;
+            right: rem(-51);
+        }
+
+        a:hover:before{
+            content: "";
+            width: rem(12);
+            height: rem(1);
+            background-color: #010101;
+            position: absolute;
+            right: 0;
+        }
+
         button{
             height: rem(64);
             border-bottom: 2px solid #f0f0f0;
+            outline: none;
+            cursor: pointer;
         }
 
         a:hover{
             svg{
                 fill: #010101;
             }
+        }
+
+        button:hover{
+            svg{
+                fill: #c68a43;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:769px){
+    .sect1{
+        padding: 0 20px;
+
+        .wrapper{
+            padding: 61px 0 67px 0;
+            border: none;
+        }
+
+        .wrapper:after{
+            display: none;
+        }
+
+        &__title{
+            position: inherit;
+            text-align: center;
+            height: auto;
+            margin-bottom: 19px;
+            span{
+                font-size: 36px;
+                letter-spacing: 0.4px;
+                text-shadow: 0 15px 60px rgba(61, 61, 61, 0.3);
+                line-height: 30px;
+                br{
+                    display: none;
+                }
+            }
+        }
+
+        &__slider{
+
+        }
+
+        &__socials{
+            display: none;
         }
     }
 }
