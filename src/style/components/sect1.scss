@@ -6,17 +6,16 @@
         border-right: 1px solid rgba(0,0,0, 0.08);
         position: relative;
         padding-top: rem(146);
-    }
-
-    .wrapper:after{
-        content: "";
-        width: 1px;
-        height: 100%;
-        background-color: rgba(0,0,0, 0.08);
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        &:after{
+            content: "";
+            width: 1px;
+            height: 100%;
+            background-color: rgba(0,0,0, 0.08);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__title{
@@ -65,23 +64,29 @@
             }
         }
 
-        a:hover:after{
-            content: "";
-            width: rem(51);
-            height: rem(1);
-            background-color: #010101;
-            opacity: 0.25;
-            position: absolute;
-            right: rem(-51);
-        }
-
-        a:hover:before{
-            content: "";
-            width: rem(12);
-            height: rem(1);
-            background-color: #010101;
-            position: absolute;
-            right: 0;
+        a{
+            &:hover:before{
+                content: "";
+                width: rem(12);
+                height: rem(1);
+                background-color: #010101;
+                position: absolute;
+                right: 0;
+            }
+            &:hover:after{
+                content: "";
+                width: rem(51);
+                height: rem(1);
+                background-color: #010101;
+                opacity: 0.25;
+                position: absolute;
+                right: rem(-51);
+            }
+            &:hover{
+                svg{
+                    fill: #010101;
+                }
+            }
         }
 
         button{
@@ -89,17 +94,10 @@
             border-bottom: 2px solid #f0f0f0;
             outline: none;
             cursor: pointer;
-        }
-
-        a:hover{
-            svg{
-                fill: #010101;
-            }
-        }
-
-        button:hover{
-            svg{
-                fill: #c68a43;
+            &:hover{
+                svg{
+                    fill: #c68a43;
+                }
             }
         }
     }
@@ -112,10 +110,9 @@
         .wrapper{
             padding: 61px 0 67px 0;
             border: none;
-        }
-
-        .wrapper:after{
-            display: none;
+            &:after{
+                display: none;
+            }
         }
 
         &__title{
@@ -132,10 +129,6 @@
                     display: none;
                 }
             }
-        }
-
-        &__slider{
-
         }
 
         &__socials{

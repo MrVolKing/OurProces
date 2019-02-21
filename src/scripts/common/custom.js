@@ -17,7 +17,7 @@ $(document).ready(() => {
     });
 
     
-    // scrill top
+    // scroll top
     $(function(){
         $('.arr_top').click(function(){
             $('html,body').animate({scrollTop: 0}, 1000);
@@ -27,12 +27,14 @@ $(document).ready(() => {
     
 
     // validations
+
     $('.form__button button').click(function(e) {
         e.preventDefault();
-        console.log($('.i').val.length )
-        if ($('.i').val.length  < 3) {
-            this.$('.i').addClass('error');
-        }
+
+        $('.inp_name').addClass('error');
+        $('.inp_mail').addClass('error');
+        $('.inp_phone').addClass('error');
+ 
     });
     
    
@@ -59,9 +61,6 @@ $(document).ready(() => {
         }
         
       });
-
-
-      
 
 
 });

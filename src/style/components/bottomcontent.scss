@@ -1,6 +1,5 @@
 .boottomcontent{
     padding: rem(507) 0 rem(45) 0;
-    // border-bottom: rem(3) solid #282828;
     transition: none;
 
     &__top{
@@ -22,19 +21,19 @@
     &__button{
         display: flex;
         justify-content: center;
-        
     }
 
     &__bottom{
+        position: relative;
+        border-bottom: rem(3) solid #282828;
+        padding-bottom: rem(40);
+
         .wrapper{
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        position: relative;
-        border-bottom: rem(3) solid #282828;
-        padding-bottom: rem(40);
-
+        
         .block{
             &_abs{
                 position: absolute;
@@ -52,14 +51,14 @@
                 span{
                     color: #ddb680;
                 }
-            }
-            span:hover{
-                color: $white;
-                span{
+                &:hover{
                     color: $white;
+                    span{
+                        color: $white;
+                    }
                 }
             }
-    
+
             a{
                 color: #ddb680;
                 font-size: rem(16);
@@ -91,15 +90,13 @@
                     width: rem(11);
                     height: rem(22);
                 }
-    
-            }
-            a:hover{
-                color: $white;
-                svg{
-                    fill: #fbcd6c;
+                &:hover{
+                    color: $white;
+                    svg{
+                        fill: #fbcd6c;
+                    }
                 }
             }
-    
         }
     }
 }
@@ -124,9 +121,11 @@
 
         &__bottom{
             padding-bottom: 14px;
+
             .wrapper{
                 display: flex;
                 flex-direction: column;
+
                 .block{
                     &_abs{
                         order: -1;
